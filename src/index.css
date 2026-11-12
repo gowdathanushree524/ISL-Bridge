@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    @apply bg-slate-50 text-navy-900 font-sans leading-normal antialiased;
+  }
+  [lang='hi'] {
+    font-family: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  }
+  [lang='kn'] {
+    font-family: 'Noto Sans Kannada', 'Inter', sans-serif;
+  }
+  :focus-visible {
+    @apply outline-none ring-2 ring-indigo-500 ring-offset-2 ring-offset-white;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
